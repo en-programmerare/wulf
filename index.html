@@ -20,7 +20,7 @@
                 align-items: center;
                 color: #fdfefa;
                 font-family: 'MonteCarlo', cursive;
-                font-size: 12dvmax;
+                font-size: 100px;
                 text-align: center;
                 width: 100vw;
                 height: 100vh;
@@ -31,6 +31,34 @@
             <div id="wulf">
                 Man får använda hjärnan om man vill
             </div>
+
+            <script>
+                (function() {
+
+                    const wulf = [
+                        "Man får använda hjärnan om man vill",
+                        "Ingen bryr sig",
+                        "Jorden är platt",
+                        "Föreläsare försöker ibland agera som dammsugarförsäljare",
+                        "Ni behöver inte ta livet av er; man får inga extraopoäng om man är död",
+                        "Allt som inte är omöjligt är möjligt",
+                        "Att göra matematik är som att gå på minor",
+                        "Det hade varit bra om man kunde titta på en fråga och sedan skita i den",
+                        "Variabelbyte kan rädda liv"
+                    ];
+
+                    /*
+                    ATT GÖRA
+                    Lägg in dag för dag istället för slumptal.
+                    */
+                   const selected = Math.floor(Math.random() * wulf.length);
+                   console.log(selected);
+
+                   document.querySelector("#wulf").innerHTML = wulf[selected];
+
+
+                })();
+            </script>
             
         </body>
     </head>
