@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Veckans Wulfcitat</title>
+        <title>Wulfcitat</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -20,10 +20,11 @@
                 align-items: center;
                 color: #fdfefa;
                 font-family: 'MonteCarlo', cursive;
-                font-size: calc(15vw - 1rem);
                 text-align: center;
-                width: 100vw;
+                width: calc(100vw-10px);
                 height: 100vh;
+                font-size: 50px; /* om webbläsaren inte stödjer min eller max, defaulta till 50px */
+                font-size: min(max(50px, 10vw), 100px);
             }
         </style>
         <body>
@@ -47,16 +48,11 @@
                         "Variabelbyte kan rädda liv"
                     ];
 
-                    /*
-                    ATT GÖRA
-                    Lägg in dag för dag istället för slumptal.
-                    */
+
                    const selected = Math.floor(Math.random() * wulf.length);
                    console.log(selected);
 
                    document.querySelector("#wulf").innerHTML = wulf[selected];
-
-
                 })();
             </script>
             
